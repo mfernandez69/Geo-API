@@ -2,6 +2,24 @@
     height: fit-content;
     grid-area: resultados;
     border: 1px solid black;
-    color: azure;
-    font-size: 20px;
+}
+#imagenBandera{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+#resultados{
+   line-height: 40px;
+    grid-area: datos;
+}
+#titulos{
+    list-style: none;
+    color: rgb(27, 113, 167);
+    font-size: 35px;
+}
+#subtipo{
+    list-style: none;
+    grid-area: datos;
+    color: rgb(77, 164, 188);
+    font-size: 35px; 
 }

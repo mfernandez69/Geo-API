@@ -11,18 +11,19 @@
     <form id="form">
       <label>
         <h2>Geo-API</h2>
-        <input required id="inputIp" type="text" placeholder="Introduce una IP aquí">
+        <input id="inputIp" type="text" placeholder="Introduce una IP aquí" required>
         <small id="ejemplo">Por ejemplo: 54.85.132.205</small>
       </label>
-      <button id="btnEnviar" type="submit" >
+      <button id="btnEnviar" type="button" >
         Buscar información de esta IP
       </button>
-      <button id="btnPropiaIp" type="submit" >
+      <button id="btnPropiaIp" type="button" >
         Buscar mi porpia IP
       </button>
     </form>
     <div id="res">
     </div>
+    
   </main>
   <script src="script.js" defer></script>
 </body>

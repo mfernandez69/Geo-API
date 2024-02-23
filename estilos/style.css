@@ -49,6 +49,7 @@ body {
     color: rgb(77, 164, 188);
     font-family: "Varino";
      src: url("/font-Family/Varino\ -\ Normal.ttf");
+     filter: drop-shadow(6px 5px 0px rgb(47, 77, 85));
 }
 @font-face{
     font-family: "Varino";
