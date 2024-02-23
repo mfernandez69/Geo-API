@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(29, 24, 40);
+    padding: 30px;
+}
+
+.contenedor {
+    padding: 20PX;
+    height: fit-content;
+    width: 60%;
+    margin-left: 20%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 1fr;
+    grid-template-areas:
+        "formulario"
+        "resultados";
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(45, 74, 137);
+    background-color: rgb(20, 17, 26);
+}
+
+#form {
+    display: grid;
+    grid-area: formulario;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "label label"
+        "enviar IPpropia";
+}
+
+#form label {
+    grid-area: label;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 50px 80px;
+    grid-template-areas:
+        "tituloIp"
+        "input"
+        "ejemplo";
+}
+
+#form h2 {
+    grid-area: tituloIp;
+    font-size: 80px;
+    height: 80px;
+    text-align: center;
+    color: rgb(77, 164, 188);
+    font-family: "Varino";
+     src: url("/font-Family/Varino\ -\ Normal.ttf");
+}
+@font-face{
+    font-family: "Varino";
+    src: url("/font-Family/Varino\ -\ Normal.ttf");
+}
+#inputIp {
+    grid-area: input;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(20, 17, 26);
+    border: 2px solid rgb(8, 127, 160);
+    color: rgb(45, 74, 137);
+}
+input{
+    border: 2px solid rgb(8, 127, 160);
+    color: rgb(45, 74, 137); 
+}
+#inputIp input ::placeholder{
+    border: 2px solid rgb(8, 127, 160);
+    color: rgb(45, 74, 137); 
+}
+#ejemplo {
+    margin-top: 30PX;
+    grid-area: ejemplo;
+    font-size: 30px;
+    color: rgb(77, 164, 188);
+}
+
+#btnEnviar {
+    grid-area: enviar;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: rgb(20, 17, 26);
+    color: rgb(45, 74, 137); 
+    border: 2px solid rgb(8, 127, 160);
+    margin-right: 10px;
+}
+#btnPropiaIp {
+    grid-area: IPpropia;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: rgb(20, 17, 26);
+    color: rgb(45, 74, 137); 
+    border: 2px solid rgb(8, 127, 160);
+}
