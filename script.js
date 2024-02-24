@@ -52,7 +52,7 @@ function mostrarInfo(infoIp) {
     for (const i in infoIp) {
       if (typeof infoIp[i] === 'object') {
         txt += "<li>" + i + ":</li><ul id='subtipo'>";
-        mostrarSubtipos(infoIp[i],txt);
+        mostrarSubtipos(infoIp[i],txt,i);
         txt += "</ul>";
       } else {
         if (i === "ip_address") {
@@ -67,9 +67,9 @@ function mostrarInfo(infoIp) {
   res.innerHTML = txt;
   console.log("Mostar informacion ip");
 }
- function mostrarSubtipos(subInfo, txt) {
+function mostrarSubtipos(subInfo, txt,i) {
   for (const j in subInfo) {
-    if (subInfo !== 'flag') {
+    if (i !== 'flag') {
       if (j === "is_vpn") {
         if (subInfo[j] == "false") {
           txt += "<li id='campoSeguridad'>" + "<img id='imagenVpn' src='img/tick.png' alt='Image'>";
@@ -82,7 +82,8 @@ function mostrarInfo(infoIp) {
         txt += "<li>" + j + ": " + subInfo[j] + "</li>";
       }
     } else {
-      if (i === 'png') {
+      console.log(subInfo);
+      if (j === 'png') {
         const urlImagen = subInfo[j];
         txt += "<img id='imagenBandera' src='" + urlImagen + "' alt='Image'>";
         console.log(urlImagen);
