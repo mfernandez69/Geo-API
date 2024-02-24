@@ -5,7 +5,7 @@ const btnPropiaIP = document.getElementById('btnPropiaIp');
 //-------------------------------------------------
 
 btnEnviar.addEventListener('click', registrarIp);
-btnPropiaIP.addEventListener('click', enivarPropiaIP);
+btnPropiaIP.addEventListener('click', enviarPropiaIP);
 //--------------------------------------------------
 function registrarIp() {
   console.log("registrar ipp");
@@ -31,7 +31,7 @@ function enviarPeticion(valorInput) {
       mostrarInfo(res);
     })
 }
-function enivarPropiaIP() {
+function enviarPropiaIP() {
   //Si no se incluye el parametro de Ip, la API mostrará los resultados de la IP que los solicita
   fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=e6b1497a0dc84e0b92832a90a864f30e")
     .then(res => res.json())
@@ -52,7 +52,7 @@ function mostrarInfo(infoIp) {
     for (const i in infoIp) {
       if (typeof infoIp[i] === 'object') {
         txt += "<li>" + i + ":</li><ul id='subtipo'>";
-        mostrarSubtipos(infoIp[i],txt,i);
+        mostrarSubtipos(infoIp[i], txt, i);
         txt += "</ul>";
       } else {
         if (i === "ip_address") {
@@ -67,9 +67,10 @@ function mostrarInfo(infoIp) {
   res.innerHTML = txt;
   console.log("Mostar informacion ip");
 }
-function mostrarSubtipos(subInfo, txt,i) {
-  for (const j in subInfo) {
-    if (i !== 'flag') {
+function mostrarSubtipos(subInfo, txt, titulo) {
+  console.log(titulo);
+  if (titulo !== 'flag') {
+    for (const j in subInfo) {
       if (j === "is_vpn") {
         if (subInfo[j] == "false") {
           txt += "<li id='campoSeguridad'>" + "<img id='imagenVpn' src='img/tick.png' alt='Image'>";
@@ -81,8 +82,9 @@ function mostrarSubtipos(subInfo, txt,i) {
       } else {
         txt += "<li>" + j + ": " + subInfo[j] + "</li>";
       }
-    } else {
-      console.log(subInfo);
+    }
+  } else {
+    for (const j in subInfo) {
       if (j === 'png') {
         const urlImagen = subInfo[j];
         txt += "<img id='imagenBandera' src='" + urlImagen + "' alt='Image'>";
