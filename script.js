@@ -51,21 +51,15 @@ function mostrarInfo(infoIp) {
   if (typeof infoIp === 'object') {
     for (const i in infoIp) {
       if (typeof infoIp[i] === 'object') {
-          txt += "<li>" + i + ":</li><ul id='subtipo'>";
-        for (const j in infoIp[i]) {
-          if (i !== 'flag') {
-            txt += "<li>" + j + ": " + infoIp[i][j] + "</li>";
-        }else {
-          if(j ==='png'){
-            const urlImagen = infoIp[i][j]; // Assuming the URL is stored in infoIp[21][2]
-            txt += "<img id='imagenBandera' src='" + urlImagen + "' alt='Image'>";
-            console.log(urlImagen);
-          }
-          }
-        }
+        txt += "<li>" + i + ":</li><ul id='subtipo'>";
+        mostrarSubtipos(infoIp[i],txt);
         txt += "</ul>";
       } else {
-        txt += "<li>" + i + ": " + infoIp[i] + "</li>";
+        if (i === "ip_address") {
+          txt += "<li id='campoIP'>" + i + ": " + infoIp[i] + "</li>";
+        } else {
+          txt += "<li>" + i + ": " + infoIp[i] + "</li>";
+        }
       }
     }
   }
@@ -73,3 +67,26 @@ function mostrarInfo(infoIp) {
   res.innerHTML = txt;
   console.log("Mostar informacion ip");
 }
+ function mostrarSubtipos(subInfo, txt) {
+  for (const j in subInfo) {
+    if (subInfo !== 'flag') {
+      if (j === "is_vpn") {
+        if (subInfo[j] == "false") {
+          txt += "<li id='campoSeguridad'>" + "<img id='imagenVpn' src='img/tick.png' alt='Image'>";
+        } else {
+          txt += "<li id='campoSeguridad'>" + "<img id='imagenVpn' src='img/cruz.png' alt='Image'>";
+        }
+        txt += j + ": " + subInfo[j] + "</li>";
+
+      } else {
+        txt += "<li>" + j + ": " + subInfo[j] + "</li>";
+      }
+    } else {
+      if (i === 'png') {
+        const urlImagen = subInfo[j];
+        txt += "<img id='imagenBandera' src='" + urlImagen + "' alt='Image'>";
+        console.log(urlImagen);
+      }
+    }
+  }
+} 

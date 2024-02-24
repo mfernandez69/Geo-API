@@ -1,15 +1,16 @@
 #res {
     height: fit-content;
     grid-area: resultados;
-    border: 1px solid black;
 }
 #imagenBandera{
     width: 100px;
     height: 100px;
     border-radius: 10px;
+    
+    margin-left: 30px;
 }
 #resultados{
-   line-height: 40px;
+   line-height: 45px;
     grid-area: datos;
 }
 #titulos{
@@ -22,4 +23,15 @@
     grid-area: datos;
     color: rgb(77, 164, 188);
     font-size: 35px; 
+}
+#campoIP{
+    color: #88c4d9;
+    font-size: larger;
+}
+#imagenVpn{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#campoSeguridad{
+    align-items: center;
 }
