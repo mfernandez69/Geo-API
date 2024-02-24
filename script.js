@@ -8,7 +8,7 @@ btnEnviar.addEventListener('click', registrarIp);
 btnPropiaIP.addEventListener('click', enviarPropiaIP);
 //--------------------------------------------------
 function registrarIp() {
-  console.log("registrar ipp");
+  console.log("Ip registrada");
   const valorInput = inputIp.value;
   comprobarInput(valorInput);
 }
@@ -30,6 +30,7 @@ function enviarPeticion(valorInput) {
       console.log("Mostrar datos fetch");
       mostrarInfo(res);
     })
+    .catch(error => console.error("Ip incorrecta.Por favor inserte una valida:", error));
 }
 function enviarPropiaIP() {
   //Si no se incluye el parametro de Ip, la API mostrará los resultados de la IP que los solicita
@@ -40,6 +41,7 @@ function enviarPropiaIP() {
       console.log("Mostrar datos fetch");
       mostrarInfo(res);
     })
+    .catch(error => console.error("Ip incorrecta.Por favor inserte una valida:", error));
 }
 function mostrarInfo(infoIp) {
   let txt = "<div id='resultados'><ul id='titulos'>";
@@ -86,6 +88,7 @@ function mostrarSubtipos(subInfo, txt, titulo) {
   } else {
     for (const j in subInfo) {
       if (j === 'png') {
+        console.log(j);
         const urlImagen = subInfo[j];
         txt += "<img id='imagenBandera' src='" + urlImagen + "' alt='Image'>";
         console.log(urlImagen);
