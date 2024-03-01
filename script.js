@@ -45,47 +45,67 @@ function enviarPropiaIP() {
 }
 function mostrarInfo(infoIp) {
   let txt = "<div id='resultados'><ul id='titulos'>";
+
   if (Array.isArray(infoIp)) {
     for (let i = 0; i < infoIp.length; i++) {
       txt += "<li>" + infoIp[i] + "</li>";
     }
   }
+
   if (typeof infoIp === 'object') {
+
     for (const i in infoIp) {
       if (typeof infoIp[i] === 'object') {
         txt += "<li>" + i + ":</li><ul id='subtipo'>";
-        mostrarSubtipos(infoIp[i], txt, i);
+        txt = mostrarSubtipos(infoIp[i], txt, i);
         txt += "</ul>";
-      } else {
+      } 
+      else {
         if (i === "ip_address") {
           txt += "<li id='campoIP'>" + i + ": " + infoIp[i] + "</li>";
         } else {
           txt += "<li>" + i + ": " + infoIp[i] + "</li>";
         }
       }
+
     }
   }
+
   txt += "</ul><div>";
   res.innerHTML = txt;
   console.log("Mostar informacion ip");
 }
 function mostrarSubtipos(subInfo, txt, titulo) {
   console.log(titulo);
-  if (titulo !== 'flag') {
-    for (const j in subInfo) {
-      if (j === "is_vpn") {
-        if (subInfo[j] == "false") {
-          txt += "<li id='campoSeguridad'>" + "<img id='imagenVpn' src='img/tick.png' alt='Image'>";
-        } else {
-          txt += "<li id='campoSeguridad'>" + "<img id='imagenVpn' src='img/cruz.png' alt='Image'>";
-        }
-        txt += j + ": " + subInfo[j] + "</li>";
 
-      } else {
+  if (titulo !== 'flag') {
+    console.log("Entro en el if distinto a flag");
+
+    for (const j in subInfo) {
+      console.log("Constante j es: " + j)
+      if (j === "is_vpn") {
+
+        if (subInfo[j] == "false") {
+          console.log("Entro en el subinfo false")
+          txt += "<li id='campoSeguridad'>" + "<img id='imagenVpn' src='img/tick.png' alt='Image'>";
+          console.log(txt)
+        } else {
+          console.log("Entro en el subinfo true")
+          txt += "<li id='campoSeguridad'>" + "<img id='imagenVpn' src='img/cruz.png' alt='Image'>";
+          
+        }
+
+        txt += j + ": " + subInfo[j] + "</li>";
+        console.log(txt)
+
+      } 
+      else { //Si el subtipo no es is_vpn
         txt += "<li>" + j + ": " + subInfo[j] + "</li>";
       }
     }
-  } else {
+
+  } 
+  else {
     for (const j in subInfo) {
       if (j === 'png') {
         console.log(j);
@@ -95,4 +115,6 @@ function mostrarSubtipos(subInfo, txt, titulo) {
       }
     }
   }
+
+  return txt;
 } 
