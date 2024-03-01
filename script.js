@@ -85,13 +85,13 @@ function mostrarSubtipos(subInfo, txt, titulo) {
       console.log("Constante j es: " + j)
       if (j === "is_vpn") {
 
-        if (subInfo[j] == "false") {
-          console.log("Entro en el subinfo false")
-          txt += "<li id='campoSeguridad'>" + "<img id='imagenVpn' src='img/tick.png' alt='Image'>";
+        if (subInfo[j] == "true") {
+          console.log("Entro en el subinfo true")
+          txt += "<li id='campoSeguridadBien'>" + "<img id='imagenVpn' src='img/tick.png' alt='Image'>";
           console.log(txt)
         } else {
-          console.log("Entro en el subinfo true")
-          txt += "<li id='campoSeguridad'>" + "<img id='imagenVpn' src='img/cruz.png' alt='Image'>";
+          console.log("Entro en el subinfo false")
+          txt += "<li id='campoSeguridadMal'>" + "<img id='imagenVpn' src='img/cruz.png' alt='Image'>";
           
         }
 
