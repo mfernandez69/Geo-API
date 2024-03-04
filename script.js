@@ -84,20 +84,7 @@ function mostrarSubtipos(subInfo, txt, titulo) {
     for (const j in subInfo) {
       console.log("Constante j es: " + j)
       if (j === "is_vpn") {
-
-        if (subInfo[j] == "true") {
-          console.log("Entro en el subinfo true")
-          txt += "<li id='campoSeguridadBien'>" + "<img id='imagenVpn' src='img/tick.png' alt='Image'>";
-          console.log(txt)
-        } else {
-          console.log("Entro en el subinfo false")
-          txt += "<li id='campoSeguridadMal'>" + "<img id='imagenVpn' src='img/cruz.png' alt='Image'>";
-          
-        }
-
-        txt += j + ": " + subInfo[j] + "</li>";
-        console.log(txt)
-
+      txt=mostrarVpn(subInfo,txt,j); 
       } 
       else { //Si el subtipo no es is_vpn
         txt += "<li>" + j + ": " + subInfo[j] + "</li>";
@@ -106,15 +93,35 @@ function mostrarSubtipos(subInfo, txt, titulo) {
 
   } 
   else {
-    for (const j in subInfo) {
-      if (j === 'png') {
-        console.log(j);
-        const urlImagen = subInfo[j];
-        txt += "<img id='imagenBandera' src='" + urlImagen + "' alt='Image'>";
-        console.log(urlImagen);
-      }
-    }
+    txt=mostrarBandera(subInfo,txt);
   }
 
   return txt;
 } 
+function mostrarBandera(subInfo,txt){
+  for (const j in subInfo) {
+    if (j === 'png') {
+      console.log(j);
+      const urlImagen = subInfo[j];
+      txt += "<img id='imagenBandera' src='" + urlImagen + "' alt='Image'>";
+      console.log(urlImagen);
+    }
+  }
+  return txt;
+}
+function mostrarVpn(subInfo,txt,j){
+  if (subInfo[j] == true) {
+    typeof subInfo[j];
+    console.log("Entro en el subinfo is_vpn:true")
+    txt += "<li id='campoSeguridadBien'>" + "<img id='imagenVpn' src='img/tick.png' alt='Image'>";
+    console.log(txt)
+  } else if(subInfo[j] == false){
+    typeof subInfo[j];
+    console.log("Entro en el subinfo is_vpn:false")
+    txt += "<li id='campoSeguridadMal'>" + "<img id='imagenVpn' src='img/cruz.png' alt='Image'>";
+    
+  }
+  txt += j + ": " + subInfo[j] + "</li>";
+  console.log(txt)
+  return txt;
+}
