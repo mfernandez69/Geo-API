@@ -48,7 +48,6 @@ body {
     text-align: center;
     color: rgb(77, 164, 188);
     font-family: "Varino";
-     src: url("/font-Family/Varino\ -\ Normal.ttf");
      filter: drop-shadow(6px 5px 0px rgb(47, 77, 85));
 }
 @font-face{
@@ -57,21 +56,19 @@ body {
 }
 #inputIp {
     grid-area: input;
-    font-size: 30px;
+    font-size: 35px;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     background-color: rgb(20, 17, 26);
-    border: 2px solid rgb(8, 127, 160);
-    color: rgb(45, 74, 137);
+    border: 2px solid rgb(77, 164, 188);
+    color: rgb(77, 164, 188);
+    font-family: "Apache";
 }
-input{
-    border: 2px solid rgb(8, 127, 160);
-    color: rgb(45, 74, 137); 
-}
-#inputIp input ::placeholder{
-    border: 2px solid rgb(8, 127, 160);
-    color: rgb(45, 74, 137); 
+::placeholder{
+    color: rgb(77, 164, 188);
+font-family: "Apache";
+    
 }
 #ejemplo {
     margin-top: 30PX;
@@ -84,18 +81,19 @@ input{
     grid-area: enviar;
     border-radius: 10px;
     font-size: 30px;
-    background-color: rgb(20, 17, 26);
-    color: rgb(45, 74, 137); 
+    background-color: rgb(77, 164, 188);
+    color: rgb(19, 19, 20); 
     border: 2px solid rgb(8, 127, 160);
     margin-right: 10px;
     transition: 0.3s;
+    
 }
 #btnPropiaIp {
     grid-area: IPpropia;
     border-radius: 10px;
     font-size: 30px;
-    background-color: rgb(20, 17, 26);
-    color: rgb(45, 74, 137); 
+    background-color: rgb(77, 164, 188);
+    color: rgb(28, 29, 30); 
     border: 2px solid rgb(8, 127, 160);
     transition: 0.3s;
 }

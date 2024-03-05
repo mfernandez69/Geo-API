@@ -48,20 +48,32 @@
 #resultados {
     line-height: 50px;
     grid-area: datos;
-     font-family: "Zealot"; 
+     font-family: "Apache"; 
 }
 
 @font-face{
-    font-family: "Zealot";
-    src: url("/font-Family/zealot-cdnfonts/zealot.ttf");
-    src: url("/font-Family/zealot-cdnfonts/zealotcol.ttf");
-    src: url("/font-Family/zealot-cdnfonts/zealotcoli.ttf");
-    src: url("/font-Family/zealot-cdnfonts/zealote.ttf");
-    src: url("/font-Family/zealot-cdnfonts/zealotei.ttf");
-    src: url("/font-Family/zealot-cdnfonts/zealoti.ttf");
-    src: url("/font-Family/zealot-cdnfonts/zealotl.ttf");
-    src: url("/font-Family/zealot-cdnfonts/zealotleft.ttf");
-    src: url("/font-Family/zealot-cdnfonts/zealotli.ttf");
-    src: url("/font-Family/zealot-cdnfonts/zealoto.ttf");
-    src: url("/font-Family/zealot-cdnfonts/zealotoi.ttf");
+    font-family: "Apache";
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapache.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapache3d.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapache3dital.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachebold.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapacheboldital.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachecond.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachecondital.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapacheexpand.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapacheexpandital.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachegrad.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachegradital.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachehalf.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachehalfital.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapacheital2.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachelaser.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachelaserital.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapacheleft.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapacheout.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapacheoutital.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachesemital2.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachesuperital2.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachetitle.ttf");
+    src: url("/font-Family/tempest-apache-cdnfonts/tempestapachetitleital.ttf");
 } 
