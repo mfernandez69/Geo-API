@@ -80,24 +80,33 @@ font-family: "Apache";
 #btnEnviar {
     grid-area: enviar;
     border-radius: 10px;
-    font-size: 30px;
-    background-color: rgb(77, 164, 188);
+    font-size: 40px;
+    background-color: rgb(58, 143, 166);
     color: rgb(19, 19, 20); 
     border: 2px solid rgb(8, 127, 160);
     margin-right: 10px;
     transition: 0.3s;
-    
+    width: fit-content;
+    margin-left: 35%;
+    font-family: "Cyborg";
 }
 #btnPropiaIp {
     grid-area: IPpropia;
     border-radius: 10px;
-    font-size: 30px;
-    background-color: rgb(77, 164, 188);
+    font-size: 40px;
+    width: fit-content;
+    background-color: rgb(58, 143, 166);
     color: rgb(28, 29, 30); 
     border: 2px solid rgb(8, 127, 160);
     transition: 0.3s;
+    margin-left: 10%;
+    font-family: "Cyborg";
 }
 #btnEnviar:hover,#btnPropiaIp:hover{
     transition: 0.3s;
     box-shadow: 5px 5px 0px rgb(47, 77, 85);
+}
+@font-face {
+    font-family: "Cyborg";
+    src: url("/font-Family/Cyborg/Cyborg.ttf");
 }
