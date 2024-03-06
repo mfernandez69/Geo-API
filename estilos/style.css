@@ -1,3 +1,87 @@
+@media screen and (max-width: 600px) {
+    .contenedor {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    #form h2 {
+        font-size: 50px;
+        margin-left: 10%;
+    }
+    #inputIp{
+        font-size: 18px;
+    }
+    #btnEnviar {
+        
+        font-size: 30px;
+        margin-left: 5%;
+    }
+    #btnPropiaIp {
+        font-size: 30px;
+        margin-left: 5%;
+    }
+    #ejemplo{
+        margin-left: 10px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .contenedor {
+        
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    #form h2 {
+        font-size: 60px;
+        margin-left: 20%;
+    }
+    #inputIp{
+        font-size: 25px;
+    }
+    #btnEnviar {
+        font-size: 30px;
+        margin-left: 5%;
+    }
+    #btnPropiaIp {
+        font-size: 30px;
+        margin-left: 5%;
+    }
+    #ejemplo{
+        margin-left: 10px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .contenedor {
+        
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    #form h2 {
+        font-size: 80px;
+        text-align: center;
+    }
+    #inputIp{
+        font-size: 35px;
+    }
+    #btnEnviar {
+        font-size: 40px;
+        margin-left: 15%;
+    }
+    #btnPropiaIp {
+        font-size: 40px;
+        margin-right: 15%;
+    }
+    #ejemplo{
+        margin-left: 10px;
+        font-size: 30px;
+    }
+}
+
 body {
     background-color: rgb(29, 24, 40);
     padding: 30px;
@@ -6,8 +90,7 @@ body {
 .contenedor {
     padding: 20PX;
     height: fit-content;
-    width: 60%;
-    margin-left: 20%;
+    background-color: rgb(20, 17, 26);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 400px 1fr;
@@ -17,7 +100,7 @@ body {
     border: 3px solid rgb(77, 164, 188);
     border-radius: 20px;
     box-shadow: 5px 5px 0px rgb(47, 77, 85);
-    background-color: rgb(20, 17, 26);
+
 }
 
 #form {
@@ -43,20 +126,19 @@ body {
 
 #form h2 {
     grid-area: tituloIp;
-    font-size: 80px;
     height: 80px;
-    text-align: center;
     color: rgb(77, 164, 188);
     font-family: "Varino";
-     filter: drop-shadow(6px 5px 0px rgb(47, 77, 85));
+    filter: drop-shadow(6px 5px 0px rgb(47, 77, 85));
 }
-@font-face{
+
+@font-face {
     font-family: "Varino";
     src: url("/font-Family/Varino\ -\ Normal.ttf");
 }
+/*Estilos del input para meter la IP*/
 #inputIp {
     grid-area: input;
-    font-size: 35px;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
@@ -65,47 +147,47 @@ body {
     color: rgb(77, 164, 188);
     font-family: "Apache";
 }
-::placeholder{
+
+::placeholder {
     color: rgb(77, 164, 188);
-font-family: "Apache";
-    
+    font-family: "Apache";
+
 }
+
 #ejemplo {
-    margin-top: 30PX;
+    margin-top: 30px;
     grid-area: ejemplo;
-    font-size: 30px;
+    
     color: rgb(77, 164, 188);
 }
 
 #btnEnviar {
     grid-area: enviar;
     border-radius: 10px;
-    font-size: 40px;
     background-color: rgb(58, 143, 166);
-    color: rgb(19, 19, 20); 
+    color: rgb(19, 19, 20);
     border: 2px solid rgb(8, 127, 160);
     margin-right: 10px;
     transition: 0.3s;
-    width: fit-content;
-    margin-left: 35%;
     font-family: "Cyborg";
 }
+
 #btnPropiaIp {
     grid-area: IPpropia;
     border-radius: 10px;
-    font-size: 40px;
-    width: fit-content;
     background-color: rgb(58, 143, 166);
-    color: rgb(28, 29, 30); 
+    color: rgb(28, 29, 30);
     border: 2px solid rgb(8, 127, 160);
     transition: 0.3s;
-    margin-left: 10%;
     font-family: "Cyborg";
 }
-#btnEnviar:hover,#btnPropiaIp:hover{
+
+#btnEnviar:hover,
+#btnPropiaIp:hover {
     transition: 0.3s;
     box-shadow: 5px 5px 0px rgb(47, 77, 85);
 }
+
 @font-face {
     font-family: "Cyborg";
     src: url("/font-Family/Cyborg/Cyborg.ttf");

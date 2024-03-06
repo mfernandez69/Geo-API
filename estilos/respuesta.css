@@ -1,57 +1,118 @@
+@media screen and (max-width: 600px) {
+    #resultados {
+        margin-left: -35px;
+        line-height: 30px;
+    }
+
+    #titulos {
+
+        font-size: 13px;
+    }
+
+    #subtipo {
+        font-size: 12px;
+    }
+
+    #campoIP {
+
+        font-size: 30px;
+    }
+
+    #imagenBandera {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        margin-left: 30px;
+    }
+    #imagenVpn {
+        margin-top: 10px;
+        margin-right: 10px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    #resultados {
+        line-height: 40px;
+    }
+
+    #titulos {
+        font-size: 20px;
+    }
+    #imagenBandera {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        margin-left: 30px;
+    }
+    #imagenVpn {
+        margin-top: 10px;
+        margin-right: 10px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #resultados {
+        line-height: 50px;
+    }
+
+    #titulos {
+        font-size: 30px;
+    }
+    #imagenBandera {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        margin-left: 30px;
+    }
+    #imagenVpn {
+        margin-top: 10px;
+        margin-right: 10px;
+        height: 30px;
+        width: 30px;
+    }
+}
+#resultados {
+    grid-area: datos;
+    font-family: "Apache";
+}
 #res {
     height: fit-content;
     grid-area: resultados;
 }
 
-#imagenBandera {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-
-    margin-left: 30px;
-}
 
 #titulos {
     list-style: none;
     color: rgb(10, 134, 212);
-    font-size: 30px;
 }
 
 #subtipo {
     list-style: none;
     grid-area: datos;
     color: rgb(77, 164, 188);
-    font-size: 25px;
 }
 
 #campoIP {
     color: #88c4d9;
-    font-size: 40px;
 }
 
-#imagenVpn {
-    margin-top: 10px;
-    margin-right: 10px;
-    height: 30px;
-    width: 30px;
-}
 
 #campoSeguridadMal {
     align-items: center;
     color: red;
 }
-#campoSeguridadBien{
+
+#campoSeguridadBien {
     align-items: center;
     color: rgb(37, 212, 148);
 }
 
-#resultados {
-    line-height: 50px;
-    grid-area: datos;
-     font-family: "Apache"; 
-}
 
-@font-face{
+@font-face {
     font-family: "Apache";
     src: url("/font-Family/tempest-apache-cdnfonts/tempestapache.ttf");
     src: url("/font-Family/tempest-apache-cdnfonts/tempestapache3d.ttf");
@@ -76,4 +137,4 @@
     src: url("/font-Family/tempest-apache-cdnfonts/tempestapachesuperital2.ttf");
     src: url("/font-Family/tempest-apache-cdnfonts/tempestapachetitle.ttf");
     src: url("/font-Family/tempest-apache-cdnfonts/tempestapachetitleital.ttf");
-} 
+}
