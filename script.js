@@ -21,8 +21,6 @@ function comprobarInput(valorInput) {
 }
 function enviarPeticion(valorInput) {
   console.log(valorInput);
-  // fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=e6b1497a0dc84e0b92832a90a864f30e&ip_address=82.158.73.235")
-  //megatarzan280@gmail.com
   fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=e6b1497a0dc84e0b92832a90a864f30e&ip_address=" + valorInput)
     .then(res => res.json())
     .then(res => {
