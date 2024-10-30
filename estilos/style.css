@@ -153,10 +153,10 @@ body {
 /* Fuentes personalizadas */
 @font-face {
     font-family: "Varino";
-    src: url("/font-Family/Varino\ -\ Normal.ttf");
+    src: url("font-Family/Varino\ -\ Normal.ttf");
 }
 
 @font-face {
     font-family: "Cyborg";
-    src: url("/font-Family/Cyborg/Cyborg.ttf");
+    src: url("font-Family/Cyborg/Cyborg.ttf");
 }
