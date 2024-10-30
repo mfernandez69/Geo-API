@@ -1,191 +1,159 @@
-@media screen and (max-width: 600px) {
-    .contenedor {
-        width: 80%;
-        margin-left: 10%;
-    }
-
-    #form h2 {
-        font-size: 50px;
-        margin-left: 10%;
-    }
-    #inputIp{
-        font-size: 18px;
-    }
-    #btnEnviar {
-        
-        font-size: 30px;
-        margin-left: 5%;
-    }
-    #btnPropiaIp {
-        font-size: 30px;
-        margin-left: 5%;
-    }
-    #ejemplo{
-        margin-left: 10px;
-        font-size: 25px;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 900px) {
-    .contenedor {
-        
-        width: 70%;
-        margin-left: 15%;
-    }
-
-    #form h2 {
-        font-size: 60px;
-        margin-left: 20%;
-    }
-    #inputIp{
-        font-size: 25px;
-    }
-    #btnEnviar {
-        font-size: 30px;
-        margin-left: 5%;
-    }
-    #btnPropiaIp {
-        font-size: 30px;
-        margin-left: 5%;
-    }
-    #ejemplo{
-        margin-left: 10px;
-        font-size: 30px;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    .contenedor {
-        
-        width: 60%;
-        margin-left: 20%;
-    }
-
-    #form h2 {
-        font-size: 80px;
-        text-align: center;
-    }
-    #inputIp{
-        font-size: 35px;
-    }
-    #btnEnviar {
-        font-size: 40px;
-        margin-left: 15%;
-    }
-    #btnPropiaIp {
-        font-size: 40px;
-        margin-right: 15%;
-    }
-    #ejemplo{
-        margin-left: 10px;
-        font-size: 30px;
-    }
-}
-
+/* Estilos base */
 body {
     background-color: rgb(29, 24, 40);
-    padding: 30px;
+    padding: 15px;
+    font-size: 16px;
 }
 
 .contenedor {
-    padding: 20PX;
-    height: fit-content;
+    padding: 20px;
     background-color: rgb(20, 17, 26);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 400px 1fr;
-    grid-template-areas:
-        "formulario"
-        "resultados";
     border: 3px solid rgb(77, 164, 188);
     border-radius: 20px;
     box-shadow: 5px 5px 0px rgb(47, 77, 85);
-
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #form {
-    display: grid;
-    grid-area: formulario;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "label label"
-        "enviar IPpropia";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #form label {
-    grid-area: label;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 50px 80px;
-    grid-template-areas:
-        "tituloIp"
-        "input"
-        "ejemplo";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 #form h2 {
-    grid-area: tituloIp;
-    height: 80px;
     color: rgb(77, 164, 188);
-    font-family: "Varino";
+    font-family: "Varino", sans-serif;
     filter: drop-shadow(6px 5px 0px rgb(47, 77, 85));
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-@font-face {
-    font-family: "Varino";
-    src: url("/font-Family/Varino\ -\ Normal.ttf");
-}
-/*Estilos del input para meter la IP*/
 #inputIp {
-    grid-area: input;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     background-color: rgb(20, 17, 26);
     border: 2px solid rgb(77, 164, 188);
     color: rgb(77, 164, 188);
-    font-family: "Apache";
-}
-
-::placeholder {
-    color: rgb(77, 164, 188);
-    font-family: "Apache";
-
+    font-family: "Apache", sans-serif;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
 }
 
 #ejemplo {
-    margin-top: 30px;
-    grid-area: ejemplo;
-    
     color: rgb(77, 164, 188);
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#btnEnviar {
-    grid-area: enviar;
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#btnEnviar, #btnPropiaIp {
     border-radius: 10px;
     background-color: rgb(58, 143, 166);
     color: rgb(19, 19, 20);
     border: 2px solid rgb(8, 127, 160);
-    margin-right: 10px;
     transition: 0.3s;
-    font-family: "Cyborg";
+    font-family: "Cyborg", sans-serif;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
-#btnPropiaIp {
-    grid-area: IPpropia;
-    border-radius: 10px;
-    background-color: rgb(58, 143, 166);
-    color: rgb(28, 29, 30);
-    border: 2px solid rgb(8, 127, 160);
-    transition: 0.3s;
-    font-family: "Cyborg";
-}
-
-#btnEnviar:hover,
-#btnPropiaIp:hover {
-    transition: 0.3s;
+#btnEnviar:hover, #btnPropiaIp:hover {
     box-shadow: 5px 5px 0px rgb(47, 77, 85);
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .contenedor {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #form h2 {
+        font-size: 2.5em;
+    }
+
+    #inputIp {
+        font-size: 1em;
+    }
+
+    #btnEnviar, #btnPropiaIp {
+        font-size: 1.2em;
+        padding: 8px 16px;
+    }
+
+    #ejemplo {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .contenedor {
+        width: 80%;
+    }
+
+    #form h2 {
+        font-size: 3em;
+    }
+
+    #inputIp {
+        font-size: 1.2em;
+    }
+
+    #btnEnviar, #btnPropiaIp {
+        font-size: 1.3em;
+    }
+
+    #ejemplo {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .contenedor {
+        width: 70%;
+    }
+
+    #form h2 {
+        font-size: 3.5em;
+    }
+
+    #inputIp {
+        font-size: 1.4em;
+    }
+
+    #btnEnviar, #btnPropiaIp {
+        font-size: 1.5em;
+    }
+
+    #ejemplo {
+        font-size: 1.3em;
+    }
+}
+
+/* Fuentes personalizadas */
+@font-face {
+    font-family: "Varino";
+    src: url("/font-Family/Varino\ -\ Normal.ttf");
 }
 
 @font-face {
